@@ -3,155 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>קביעת תור - dr-cohen</title>
+    <title>קביעת תור</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-            direction: rtl;
-        }
-        
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .logo h1 {
-            color: #667eea;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-        
-        .logo p {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 500;
-            font-size: 14px;
-        }
-        
-        label .required {
-            color: #e74c3c;
-            margin-right: 3px;
-        }
-        
-        input, select, textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-        
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-        
-        .btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-            margin-top: 10px;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
-        }
-        
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .success-message {
-            background: #d4edda;
-            border: 2px solid #c3e6cb;
-            color: #155724;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            display: none;
-            text-align: center;
-        }
-        
-        .error-message {
-            background: #f8d7da;
-            border: 2px solid #f5c6cb;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            display: none;
-            text-align: center;
-        }
-        
-        .info-box {
-            background: #e7f3ff;
-            border-right: 4px solid #667eea;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            font-size: 14px;
-            color: #333;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 30px 20px;
-            }
-            
-            .logo h1 {
-                font-size: 24px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; direction: rtl; }
+        .container { max-width: 500px; margin: 0 auto; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .logo { text-align: center; margin-bottom: 30px; }
+        .logo h1 { color: #667eea; font-size: 28px; margin-bottom: 5px; }
+        .logo p { color: #666; font-size: 14px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: #333; font-weight: 500; font-size: 14px; }
+        label .required { color: #e74c3c; margin-right: 3px; }
+        input, select, textarea { width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 16px; transition: all 0.3s; font-family: inherit; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: #667eea; box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); }
+        textarea { resize: vertical; min-height: 100px; }
+        .btn { width: 100%; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 10px; font-size: 18px; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-top: 10px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4); }
+        .btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .success-message { background: #d4edda; border: 2px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 10px; margin-bottom: 20px; display: none; text-align: center; }
+        .error-message { background: #f8d7da; border: 2px solid #f5c6cb; color: #721c24; padding: 15px; border-radius: 10px; margin-bottom: 20px; display: none; text-align: center; }
+        .info-box { background: #e7f3ff; border-right: 4px solid #667eea; padding: 15px; border-radius: 8px; margin-bottom: 25px; font-size: 14px; color: #333; }
     </style>
 </head>
 <body>
@@ -160,135 +31,92 @@
             <h1>📅 קביעת תור</h1>
             <p>מלא את הפרטים ונחזור אליך בהקדם</p>
         </div>
-
-        <div class="info-box">
-            ℹ️ לאחר שליחת הטופס, נחזור אליך תוך 24 שעות לאישור התור
-        </div>
-
-        <div id="successMessage" class="success-message">
-            ✅ הבקשה נשלחה בהצלחה! נחזור אליך בהקדם.
-        </div>
-
-        <div id="errorMessage" class="error-message">
-            ❌ אירעה שגיאה. אנא נסה שנית.
-        </div>
-
+        <div class="info-box">ℹ️ לאחר שליחת הטופס, נחזור אליך תוך 24 שעות לאישור התור</div>
+        <div id="successMessage" class="success-message">✅ הבקשה נשלחה בהצלחה! נחזור אליך בהקדם.</div>
+        <div id="errorMessage" class="error-message">❌ אירעה שגיאה. אנא נסה שנית.</div>
         <form id="bookingForm">
             <div class="form-group">
-                <label>
-                    <span class="required">*</span>
-                    שם מלא
-                </label>
-                <input type="text" id="patient_name" name="patient_name" required placeholder="הכנס את שמך המלא">
+                <label><span class="required">*</span> שם מלא</label>
+                <input type="text" id="patient_name" required placeholder="הכנס את שמך המלא">
             </div>
-
             <div class="form-group">
-                <label>
-                    <span class="required">*</span>
-                    טלפון
-                </label>
-                <input type="tel" id="patient_phone" name="patient_phone" required placeholder="050-1234567">
+                <label><span class="required">*</span> טלפון</label>
+                <input type="tel" id="patient_phone" required placeholder="050-1234567">
             </div>
-
             <div class="form-group">
                 <label>אימייל</label>
-                <input type="email" id="patient_email" name="patient_email" placeholder="example@gmail.com">
+                <input type="email" id="patient_email" placeholder="example@gmail.com">
             </div>
-
             <div class="form-group">
-                <label>
-                    <span class="required">*</span>
-                    תאריך מועדף
-                </label>
-                <input type="date" id="preferred_date" name="preferred_date" required>
+                <label><span class="required">*</span> תאריך מועדף</label>
+                <input type="date" id="preferred_date" required>
             </div>
-
             <div class="form-group">
                 <label>שעה מועדפת</label>
-                <select id="preferred_time" name="preferred_time">
+                <select id="preferred_time">
                     <option value="morning">בוקר (8:00-12:00)</option>
                     <option value="afternoon">צהריים (12:00-16:00)</option>
                     <option value="evening">ערב (16:00-20:00)</option>
                 </select>
             </div>
-
             <div class="form-group">
-                <label>
-                    <span class="required">*</span>
-                    סיבת הפנייה
-                </label>
-                <textarea id="reason" name="reason" required placeholder="תאר בקצרה את סיבת הפנייה..."></textarea>
+                <label><span class="required">*</span> סיבת הפנייה</label>
+                <textarea id="reason" required placeholder="תאר בקצרה את סיבת הפנייה..."></textarea>
             </div>
-
             <div class="form-group">
                 <label>הערות נוספות</label>
-                <textarea id="notes" name="notes" placeholder="הערות או בקשות מיוחדות..."></textarea>
+                <textarea id="notes" placeholder="הערות או בקשות מיוחדות..."></textarea>
             </div>
-
-            <button type="submit" class="btn" id="submitBtn">
-                שלח בקשה לתור
-            </button>
+            <button type="submit" class="btn" id="submitBtn">שלח בקשה לתור</button>
         </form>
     </div>
-
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const clinicCode = urlParams.get('c') || 'dr-cohen';
+        document.getElementById('preferred_date').setAttribute('min', new Date().toISOString().split('T')[0]);
         
-        const form = document.getElementById('bookingForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-        
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('preferred_date').setAttribute('min', today);
-        
-        form.addEventListener('submit', async (e) => {
+        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const success = document.getElementById('successMessage');
+            const error = document.getElementById('errorMessage');
             
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'שולח...';
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-            
-            const formData = {
-                clinic_code: clinicCode,
-                patient_name: document.getElementById('patient_name').value,
-                patient_phone: document.getElementById('patient_phone').value,
-                patient_email: document.getElementById('patient_email').value,
-                preferred_date: document.getElementById('preferred_date').value,
-                preferred_time: document.getElementById('preferred_time').value,
-                reason: document.getElementById('reason').value,
-                notes: document.getElementById('notes').value
-            };
+            btn.disabled = true;
+            btn.textContent = 'שולח...';
+            success.style.display = 'none';
+            error.style.display = 'none';
             
             try {
-                const response = await fetch('https://app.base44.com/api/apps/690b49ee00e170050dc08d95/functions/submitBooking', {
+                const response = await fetch('https://app.base44.com/api/apps/690b49ee00e170050dc08d95/functions/publicClinicApi', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        action: 'submitAppointment',
+                        clinic_code: clinicCode,
+                        patient_name: document.getElementById('patient_name').value,
+                        patient_phone: document.getElementById('patient_phone').value,
+                        patient_email: document.getElementById('patient_email').value,
+                        preferred_date: document.getElementById('preferred_date').value,
+                        preferred_time: document.getElementById('preferred_time').value,
+                        reason: document.getElementById('reason').value,
+                        notes: document.getElementById('notes').value
+                    })
                 });
                 
                 const result = await response.json();
-                
                 if (result.success) {
-                    successMessage.style.display = 'block';
-                    form.reset();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    success.style.display = 'block';
+                    document.getElementById('bookingForm').reset();
                 } else {
-                    errorMessage.textContent = '❌ ' + (result.error || 'אירעה שגיאה');
-                    errorMessage.style.display = 'block';
+                    error.textContent = '❌ ' + (result.error || 'אירעה שגיאה');
+                    error.style.display = 'block';
                 }
-            } catch (error) {
-                console.error('Error:', error);
-                errorMessage.textContent = '❌ שגיאת תקשורת. נסה שוב מאוחר יותר.';
-                errorMessage.style.display = 'block';
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'שלח בקשה לתור';
+            } catch (err) {
+                error.textContent = '❌ שגיאת תקשורת';
+                error.style.display = 'block';
             }
+            btn.disabled = false;
+            btn.textContent = 'שלח בקשה לתור';
         });
     </script>
 </body>
