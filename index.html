@@ -149,7 +149,6 @@
     <script>
         // Set minimum date to today
         document.getElementById('preferred_date').min = new Date().toISOString().split('T')[0];
-
         // Check for clinic code in URL parameter (?c=xxx or ?clinic=xxx)
         const urlParams = new URLSearchParams(window.location.search);
         const clinicFromUrl = urlParams.get('c') || urlParams.get('clinic');
