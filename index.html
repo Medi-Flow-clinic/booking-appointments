@@ -89,7 +89,10 @@
             try {
                 const response = await fetch('https://app.base44.com/api/apps/690b49ee00e170050dc08d95/functions/submitBooking', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer anonymous'
+                    },
                     body: JSON.stringify({
                         clinic_code: clinicCode,
                         patient_name: document.getElementById('patient_name').value,
