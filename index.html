@@ -87,33 +87,44 @@
             error.style.display = 'none';
             
             try {
-                const response = await fetch('https://app.base44.com/api/apps/690b49ee00e170050dc08d95/functions/submitBooking', {
+                const response = await fetch('https://app.base44.com/api/apps/690b49ee00e170050dc08d95/entities/AppointmentRequest', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'api_key': '7c6bdd201e6043a2b791ecbff4e52ce8'
+                    },
                     body: JSON.stringify({
                         clinic_code: clinicCode,
                         patient_name: document.getElementById('patient_name').value,
                         patient_phone: document.getElementById('patient_phone').value,
-                        patient_email: document.getElementById('patient_email').value,
+                        patient_email: document.getElementById('patient_email').value || '',
                         preferred_date: document.getElementById('preferred_date').value,
                         preferred_time: document.getElementById('preferred_time').value,
                         reason: document.getElementById('reason').value,
-                        notes: document.getElementById('notes').value
+                        notes: document.getElementById('notes').value || '',
+                        status: 'pending',
+                        provider_id: 'default',
+                        provider_name: 'MediFlow Clinic'
                     })
                 });
                 
                 const result = await response.json();
-                if (result.success) {
+                
+                if (response.ok) {
                     success.style.display = 'block';
                     document.getElementById('bookingForm').reset();
+                    // גלול למעלה
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    error.textContent = '❌ ' + (result.error || 'אירעה שגיאה');
+                    error.textContent = '❌ ' + (result.error || result.message || 'אירעה שגיאה');
                     error.style.display = 'block';
                 }
             } catch (err) {
-                error.textContent = '❌ שגיאת תקשורת';
+                console.error('Error:', err);
+                error.textContent = '❌ שגיאת תקשורת - נסה שוב';
                 error.style.display = 'block';
             }
+            
             btn.disabled = false;
             btn.textContent = 'שלח בקשה לתור';
         });
